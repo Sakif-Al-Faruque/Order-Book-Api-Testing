@@ -1,0 +1,522 @@
+{
+	"id": "b6ce2449-c075-4ec4-b123-89e1e3d2d681",
+	"name": "Book Order Api Test",
+	"timestamp": "2023-04-06T04:20:27.528Z",
+	"collection_id": "25212921-0a07e91a-804a-414b-b693-3b6f444deae0",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 17,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-04-06T04:20:18.895Z",
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "cbbb2e4c-7c99-455a-bc21-bc8ed303dbed",
+			"name": "Base url testing",
+			"url": "https://simple-books-api.glitch.me",
+			"time": 626,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"page is successfully loaded": true
+			},
+			"testPassFailCounts": {
+				"page is successfully loaded": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				626
+			],
+			"allTests": [
+				{
+					"page is successfully loaded": true
+				}
+			]
+		},
+		{
+			"id": "5d53ae45-1f0c-4107-8cf5-b898af65dc48",
+			"name": "Status testing of this URL",
+			"url": "https://simple-books-api.glitch.me/status",
+			"time": 359,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"OK message should be returned": true
+			},
+			"testPassFailCounts": {
+				"OK message should be returned": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				359
+			],
+			"allTests": [
+				{
+					"OK message should be returned": true
+				}
+			]
+		},
+		{
+			"id": "b2ac9bd9-0b75-47ae-bf1c-43f77d4fd4e2",
+			"name": "Get all the books",
+			"url": "https://simple-books-api.glitch.me/books",
+			"time": 282,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"all data should be shown": true
+			},
+			"testPassFailCounts": {
+				"all data should be shown": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				282
+			],
+			"allTests": [
+				{
+					"all data should be shown": true
+				}
+			]
+		},
+		{
+			"id": "9e7f66e5-0904-442f-ad32-70c2b5da26d1",
+			"name": "Checking query parameter value 1",
+			"url": "https://simple-books-api.glitch.me/books?type=fiction",
+			"time": 274,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"type should be fiction": true
+			},
+			"testPassFailCounts": {
+				"type should be fiction": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				274
+			],
+			"allTests": [
+				{
+					"type should be fiction": true
+				}
+			]
+		},
+		{
+			"id": "b3138cb9-b5c1-405b-b127-274be90acea8",
+			"name": "Checking query parameter value 2",
+			"url": "https://simple-books-api.glitch.me/books?type=non-fiction",
+			"time": 355,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"type should be non-fiction": true
+			},
+			"testPassFailCounts": {
+				"type should be non-fiction": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				355
+			],
+			"allTests": [
+				{
+					"type should be non-fiction": true
+				}
+			]
+		},
+		{
+			"id": "02c8048b-ad6d-4431-8121-0abfd22fdf70",
+			"name": "Get the books with path parameter",
+			"url": "https://simple-books-api.glitch.me/books/9",
+			"time": 366,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Error for not existed book id": true
+			},
+			"testPassFailCounts": {
+				"Error for not existed book id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				366
+			],
+			"allTests": [
+				{
+					"Error for not existed book id": true
+				}
+			]
+		},
+		{
+			"id": "17c21af5-5fbd-4941-a292-62f53cbaa6f2",
+			"name": "create user",
+			"url": "https://simple-books-api.glitch.me/api-clients/",
+			"time": 280,
+			"responseCode": {
+				"code": 409,
+				"name": "Conflict"
+			},
+			"tests": {
+				"Can not post duplicate data": true
+			},
+			"testPassFailCounts": {
+				"Can not post duplicate data": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				280
+			],
+			"allTests": [
+				{
+					"Can not post duplicate data": true
+				}
+			]
+		},
+		{
+			"id": "9eb1b81d-fd4b-4ebe-a5a6-b1af4d3254a1",
+			"name": "order book with invalid book id",
+			"url": "https://simple-books-api.glitch.me/orders/",
+			"time": 370,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"Order should be rejected for invalid book id": true
+			},
+			"testPassFailCounts": {
+				"Order should be rejected for invalid book id": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				370
+			],
+			"allTests": [
+				{
+					"Order should be rejected for invalid book id": true
+				}
+			]
+		},
+		{
+			"id": "8e99c7a1-3bd2-468a-82a6-039c45751eb1",
+			"name": "order out of stock book",
+			"url": "https://simple-books-api.glitch.me/orders/",
+			"time": 375,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"Order should be rejected for out of stock book": true
+			},
+			"testPassFailCounts": {
+				"Order should be rejected for out of stock book": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				375
+			],
+			"allTests": [
+				{
+					"Order should be rejected for out of stock book": true
+				}
+			]
+		},
+		{
+			"id": "01cb0d33-ccb2-4422-b4c3-f55155f760d7",
+			"name": "Get all the orders",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 375,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				375
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "12fba21b-d626-46a5-8bd1-ee3162c8323e",
+			"name": "Get all the orders without authentication",
+			"url": "https://simple-books-api.glitch.me/orders",
+			"time": 380,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"request should be unauthorized": true
+			},
+			"testPassFailCounts": {
+				"request should be unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				380
+			],
+			"allTests": [
+				{
+					"request should be unauthorized": true
+				}
+			]
+		},
+		{
+			"id": "4b5edcfd-13cd-4dc3-bf0c-eba2daf5d7b1",
+			"name": "Get a single order",
+			"url": "https://simple-books-api.glitch.me/orders/G9XT12hsZ843A3G3yBcp8",
+			"time": 379,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				379
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "29a47a5e-a1ab-40f7-a3a9-3812c4615fc3",
+			"name": "Get a single order without authentication",
+			"url": "https://simple-books-api.glitch.me/orders/G9XT12hsZ843A3G3yBcp8",
+			"time": 387,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"request should be unauthorized": true
+			},
+			"testPassFailCounts": {
+				"request should be unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				387
+			],
+			"allTests": [
+				{
+					"request should be unauthorized": true
+				}
+			]
+		},
+		{
+			"id": "901fd36a-bdac-4bbb-92bb-64963aa34720",
+			"name": "Update an order without authentication",
+			"url": "https://simple-books-api.glitch.me/orders/G9XT12hsZ843A3G3yBcp8",
+			"time": 373,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"request should be unauthorized": true
+			},
+			"testPassFailCounts": {
+				"request should be unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				373
+			],
+			"allTests": [
+				{
+					"request should be unauthorized": true
+				}
+			]
+		},
+		{
+			"id": "c8225f5c-129d-4fd3-94db-f6133d2cc5ec",
+			"name": "Update an order",
+			"url": "https://simple-books-api.glitch.me/orders/G9XT12hsZ843A3G3yBcp8",
+			"time": 378,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"request should be unauthorized": false
+			},
+			"testPassFailCounts": {
+				"request should be unauthorized": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				378
+			],
+			"allTests": [
+				{
+					"request should be unauthorized": false
+				}
+			]
+		},
+		{
+			"id": "329a0a94-101a-4c0f-9d2e-ed4062a762ae",
+			"name": "Delete an order without authentication",
+			"url": "https://simple-books-api.glitch.me/orders/G9XT12hsZ843A3G3yBcp8",
+			"time": 375,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {
+				"request should be unauthorized": true
+			},
+			"testPassFailCounts": {
+				"request should be unauthorized": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				375
+			],
+			"allTests": [
+				{
+					"request should be unauthorized": true
+				}
+			]
+		},
+		{
+			"id": "ae3124bd-bfb3-4a85-b29a-6cbf9c699db3",
+			"name": "Delete an order",
+			"url": "https://simple-books-api.glitch.me/orders/G9XT12hsZ843A3G3yBcp8",
+			"time": 379,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				379
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 6313,
+	"collection": {
+		"requests": [
+			{
+				"id": "cbbb2e4c-7c99-455a-bc21-bc8ed303dbed",
+				"method": "GET"
+			},
+			{
+				"id": "5d53ae45-1f0c-4107-8cf5-b898af65dc48",
+				"method": "GET"
+			},
+			{
+				"id": "b2ac9bd9-0b75-47ae-bf1c-43f77d4fd4e2",
+				"method": "GET"
+			},
+			{
+				"id": "9e7f66e5-0904-442f-ad32-70c2b5da26d1",
+				"method": "GET"
+			},
+			{
+				"id": "b3138cb9-b5c1-405b-b127-274be90acea8",
+				"method": "GET"
+			},
+			{
+				"id": "02c8048b-ad6d-4431-8121-0abfd22fdf70",
+				"method": "GET"
+			},
+			{
+				"id": "17c21af5-5fbd-4941-a292-62f53cbaa6f2",
+				"method": "POST"
+			},
+			{
+				"id": "9eb1b81d-fd4b-4ebe-a5a6-b1af4d3254a1",
+				"method": "POST"
+			},
+			{
+				"id": "8e99c7a1-3bd2-468a-82a6-039c45751eb1",
+				"method": "POST"
+			},
+			{
+				"id": "01cb0d33-ccb2-4422-b4c3-f55155f760d7",
+				"method": "GET"
+			},
+			{
+				"id": "12fba21b-d626-46a5-8bd1-ee3162c8323e",
+				"method": "GET"
+			},
+			{
+				"id": "4b5edcfd-13cd-4dc3-bf0c-eba2daf5d7b1",
+				"method": "GET"
+			},
+			{
+				"id": "29a47a5e-a1ab-40f7-a3a9-3812c4615fc3",
+				"method": "GET"
+			},
+			{
+				"id": "901fd36a-bdac-4bbb-92bb-64963aa34720",
+				"method": "PATCH"
+			},
+			{
+				"id": "c8225f5c-129d-4fd3-94db-f6133d2cc5ec",
+				"method": "PATCH"
+			},
+			{
+				"id": "329a0a94-101a-4c0f-9d2e-ed4062a762ae",
+				"method": "DELETE"
+			},
+			{
+				"id": "ae3124bd-bfb3-4a85-b29a-6cbf9c699db3",
+				"method": "DELETE"
+			}
+		]
+	}
+}
